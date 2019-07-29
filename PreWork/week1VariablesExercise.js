@@ -40,7 +40,7 @@ var num2 = 10;
 // Exercise 6. Write a comment below explaining the difference between the rules
 // for num1 and num2 from Exercise 5. What numbers would be valid values for 
 // num2 but not num1?
-//
+
 
 /* The var num2  includes in their values the numbers 1 and 10.
 The same doesn't happen in the num1 that don't use the operator = in the sentence.*/
