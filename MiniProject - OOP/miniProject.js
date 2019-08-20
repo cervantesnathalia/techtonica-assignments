@@ -5,8 +5,9 @@ class Ticket {
     }
 }
 class Event {
-    constructor(name, description) {
+    constructor(name, description, eventDate) {
         this.name = name;
+        this.eventDate = eventDate;
         this.description = description;
         this.availableTickets = []
     }
@@ -14,6 +15,8 @@ class Event {
         let newTicket = new Ticket(type, price);
         this.availableTickets.push(newTicket)
     }
+
+    // Add checked for when min or max == 0; and when either is negative
     searchTickets(minPrice, maxPrice) {
         let msg = "Eligible tickets: "
         let counter = 1
@@ -24,11 +27,24 @@ class Event {
                 counter++
             }
         }
-        if (counter == 1) {
+        if (counter == 1 || minPrice < 0 || maxPrice < 0) { // price range ensure the negative cases and 0
             return "No tickets available."
         } else {
             return msg
         }
+    }
+
+    cheapestTickets() { //doesnt need a parameter because have all the informations I need to return the cheapest ticket
+        if (this.availableTickets.length === 0) {
+            return "No tickets available."
+        }
+        let currCheapestTicket = this.availableTickets[0];
+        for (let i = 0; i < this.availableTickets.length; i++) {
+            if (this.availableTickets[i].price < currCheapestTicket.price) {
+                currCheapestTicket = this.availableTickets;
+            }
+        }
+        return currCheapestTicket;
     }
 }
 
@@ -51,14 +67,28 @@ event_obj2.addAvailableTickets("Balcony", 100)
 
 console.log(event_obj2.searchTickets(0, 250))
 
+$(document).ready(function () {
+    document.getElementById("eventName").innerHTML = event_obj2.name;
+    document.getElementById("eventDescription").innerHTML = `Description: ${event_obj2.description}`;
+});
+
+function search() {
+    let minPrice = document.getElementById("price-min").value;
+    let maxPrice = document.getElementById("price-max").value;
+    console.log(event_obj2)
+    document.getElementById("response").innerHTML = event_obj2.searchTickets(minPrice, maxPrice);
+}
+
+
 
 $(document).ready(function () {
     let html = "";
     $.each(event_array, function (index, item) {
-        html += `<li>${item.name} - ${item.description} - ${item.searchTickets(0,100)} </li>`;
+        html += `<li>${item.name} - ${item.description} - ${item.searchTickets(0, 100)} </li>`;
     });
     // insert final html into #event...
     $("#event").html(html);
 });
+
 
 

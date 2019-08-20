@@ -21,6 +21,7 @@ function printVacations(input_array) {
 vacationList = [['Tammy', 'Tahiti'], ['Erin', 'Banff, Alberta, Canada'], ['Janet', 'London']]
 console.log(printVacations(vacationList))
 
+
 /////////////////////////////////////////////
 
 
@@ -36,6 +37,7 @@ console.log(printVacations(vacationList))
 // Erin is willing to go to Banff, Alberta, Canada or Iceland.
 // Janet is willing to go to London or Hogwarts.
 
+
 function printVacations2(input_array) {
     output = "";
     for (i = 0; i < input_array.length; i++) {
@@ -49,9 +51,7 @@ vacationList2 = [ ['Tammy', ['Tahiti', 'Bali', 'Hawaii']], ['Erin', ['Banff, Alb
 console.log(printVacations2(vacationList2))
 
 
-// Tammy is willing to go to Tahiti, Bali or Hawaii.s
-// Erin is willing to go to Banff, Alberta, Canada or Iceland.
-// Janet is willing to go to London or Hogwarts.
+
 
 
 

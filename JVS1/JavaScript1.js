@@ -12,19 +12,21 @@
 // // return product;
 
 
-function calculate(num1, operator, num2) { 
-    if (operator === '+'){
+function calculate(num1, operator, num2) {
+    if (operator === '+') {
         return num1 + num2
-    } else if (operator === '*'){
+    } else if (operator === '*') {
         return num1 * num2
-    } else if (operator === '/'){
+    } else if (operator === '/') {
         return num1 / num2
     } else {
         return num1 % num2
     }
 }
- console.log(calculate(3,'*',7))
- 
+console.log(calculate(3, '*', 7))
+
+
+
 
 
 

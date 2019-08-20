@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  Required meta tags
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="miniProject.js"></script>
+  <style>
+
+  </style>
+  <title>Hello, world!</title>
+</head>
+
+<body>
+
+  <div data-role="page">
+    <div data-role="header">
+      <div class="ui-content">
+        <h2 id="eventName"></h2>
+        <h4>Date: </h4>
+        <h8 id="eventDescription"></h8>
+      </div>
+    </div>
+    <div data-role="main" class="ui-content">
+      <p>Select Price range you would like to search for available tickets.</p>
+      <div>
+        <div data-role="rangeslider">
+          <label for="price-min">Price:</label>
+          <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
+          <label for="price-max">Price:</label>
+          <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000">
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-2 bg">
+            <button onclick="search()" type="button" class="btn btn-outline-secondary"> Search</button>
+          </div>
+          <div class="col-10 bg"></div>
+        </div>
+      </div>
+    </div>
+    <div class="ui-content" id="response">
+
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

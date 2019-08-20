@@ -1,21 +1,21 @@
-// function getGrade(score) {
-//     let grade;
-//     if (score > 25 && score <= 30) {
-//         grade = "A"
-//     } else if (score > 20 && score <= 25) {
-//         grade = "B"
-//     } else if (score > 15 && score <= 20) {
-//         grade = "C"
-//     } else if (score > 10 && score <= 15) {
-//         grade = "D"
-//     } else if (score > 5 && score <= 10) {
-//         grade = "E"
-//     } else if (score >= 0 && score <= 5){
-//         grade = "F"
-//     }
-//     return grade;
-// }
-// console.log(getGrade(21))
+function getGrade(score) {
+    let grade;
+    if (score > 25 && score <= 30) {
+        grade = "A"
+    } else if (score > 20 && score <= 25) {
+        grade = "B"
+    } else if (score > 15 && score <= 20) {
+        grade = "C"
+    } else if (score > 10 && score <= 15) {
+        grade = "D"
+    } else if (score > 5 && score <= 10) {
+        grade = "E"
+    } else if (score >= 0 && score <= 5){
+        grade = "F"
+    }
+    return grade;
+}
+console.log(getGrade(21))
 
 
 // Part I
@@ -40,10 +40,10 @@
 // }
 
 // // What should the above code console.log?
-// Keep it up!
+Keep it up!
 
 // Why do we not need to specify if(isLearning === true)? Why does if(isLearning) work on its own?
-// Because is not need to evaluate isLearning once was already define as true variable.
+ Because is not need to evaluate isLearning once was already define as true variable.
 
 
 
