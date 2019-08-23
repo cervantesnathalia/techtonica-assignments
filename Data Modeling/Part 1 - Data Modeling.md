@@ -29,15 +29,11 @@ Make a data model for this app, and answer the following questions:
 
 - What is the primary key of the entity?
 
-  Recipes Saved
-
-  Friends Recomendations
-
-  Favorites
+  Id
 
 - What are the data types of the attributes?
 
-  Character Data
+  Text
 
   
 
