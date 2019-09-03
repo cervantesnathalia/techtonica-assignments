@@ -39,5 +39,6 @@ Look at MongoDB's Operator page and find at least one operator other than Compar
  db.zoo.find( { $and: [ { age: { $ne: 10 } }, { name: { $exists: true } } ] } )
 ```
 
-![Screen Shot 2019-09-03 at 11.45.07 AM](/Users/naty/techtonica/techtonica-assignments/MongoDB/Screen Shot 2019-09-03 at 11.45.07 AM.png)
 
+
+![Screen Shot 2019-09-03 at 11.45.07 AM](./mongodb.png)
